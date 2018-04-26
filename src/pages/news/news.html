@@ -1,0 +1,15 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>News</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <ion-item *ngFor = "let news of newsStories">
+    <p>{{ news.title }}</p>
+    <ion-img width = "200" height = "100" src = "{{ news.urlToImage }}"></ion-img>
+  </ion-item>  
+</ion-content>

@@ -1,0 +1,12 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Notes</ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content padding>
+  <ion-title>Note: {{ myNote }}</ion-title>
+  <ion-item>
+      <ion-input aria-placeholder="What would you like to make a note of?"></ion-input>
+  </ion-item>
+  <button ion-button (click) = "addNote()">Add Note</button>
+</ion-content>
