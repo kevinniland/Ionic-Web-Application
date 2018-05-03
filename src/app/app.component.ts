@@ -10,7 +10,9 @@ import { HomePage } from '../pages/home/home';
   templateUrl: 'app.html'
 })
 
-export class MyApp /*implements OnInit*/ {
+export class MyApp {
+  rootPage:any = 'LoginPage';
+
   constructor(platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen, private newsService: NewsServiceProvider) {
     platform.ready().then(() => {
       statusBar.styleDefault();
@@ -25,6 +27,4 @@ export class MyApp /*implements OnInit*/ {
       this.articles = data.articles;
     })
   }
-
-  rootPage:any = HomePage;
 }

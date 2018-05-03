@@ -4,9 +4,14 @@
   </ion-navbar>
 </ion-header>
 <ion-content padding>
-  <ion-title>Note: {{ myNote }}</ion-title>
+  <ion-title>Note:</ion-title>
   <ion-item>
-      <ion-input aria-placeholder="What would you like to make a note of?"></ion-input>
+      <ion-input [(ngModel)] = "myNote" aria-placeholder="What would you like to make a note of?"></ion-input>
   </ion-item>
   <button ion-button (click) = "addNote()">Add Note</button>
+  <ion-list>
+    <ul>
+      {{ savedNote }}
+    </ul>
+  </ion-list>
 </ion-content>

@@ -9,6 +9,9 @@ import { HomePage } from '../pages/home/home';
 import { NewsServiceProvider } from '../providers/news-service/news-service';
 import { HttpClientModule } from '@angular/common/http';
 import { IonicStorageModule } from '@ionic/Storage';
+import { Geolocation } from '@ionic-native/geolocation';
+import { GeolocationProvider } from '../providers/geolocation/geolocation';
+import { AuthServiceProvider } from '../providers/auth-service/auth-service';
 
 @NgModule({
   declarations: [
@@ -30,7 +33,12 @@ import { IonicStorageModule } from '@ionic/Storage';
     StatusBar,
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
-    NewsServiceProvider
+    NewsServiceProvider,
+    Geolocation,
+    GeolocationProvider,
+    AuthServiceProvider
   ]
 })
-export class AppModule {}
+export class AppModule {
+
+}
