@@ -11,7 +11,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { IonicStorageModule } from '@ionic/Storage';
 import { Geolocation } from '@ionic-native/geolocation';
 import { GeolocationProvider } from '../providers/geolocation/geolocation';
-import { AuthServiceProvider } from '../providers/auth-service/auth-service';
+import { Camera } from '@ionic-native/camera';
+import { Calendar } from '@ionic-native/calendar';
 
 @NgModule({
   declarations: [
@@ -36,9 +37,10 @@ import { AuthServiceProvider } from '../providers/auth-service/auth-service';
     NewsServiceProvider,
     Geolocation,
     GeolocationProvider,
-    AuthServiceProvider
+    Calendar
   ]
 })
+
 export class AppModule {
 
 }

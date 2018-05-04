@@ -1,6 +1,6 @@
 <ion-header>
   <ion-navbar>
-    <ion-title>Notes</ion-title>
+    <ion-title>{{ title }}</ion-title>
   </ion-navbar>
 </ion-header>
 <ion-content padding>
@@ -10,8 +10,8 @@
   </ion-item>
   <button ion-button (click) = "addNote()">Add Note</button>
   <ion-list>
-    <ul>
-      {{ savedNote }}
-    </ul>
+    <ol>
+      <h3><b>{{ savedNote }}</b></h3>
+    </ol>
   </ion-list>
 </ion-content>

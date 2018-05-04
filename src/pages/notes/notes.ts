@@ -8,6 +8,7 @@ import { Storage } from '@ionic/Storage';
   templateUrl: 'notes.html',
 })
 export class NotesPage {
+  title = "Notes"; // Data binding in progress
   myNote:string;
   savedNote:string;
 

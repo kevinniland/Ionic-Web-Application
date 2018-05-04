@@ -1,0 +1,35 @@
+<ion-header>
+    <ion-navbar>
+      <ion-title>{{ title }}</ion-title>
+    </ion-navbar>
+  </ion-header>
+  
+  <ion-content padding>
+    <h2>What would you like to keep track of?</h2>
+
+    <button ion-button (click) = options()>Show Options</button>
+
+    <ion-list radio-group [(ngModel)] = "option" [hidden] = "hidden">
+      <ion-item>
+        <ion-label>Steps Taken</ion-label>
+        <ion-radio value = "Amount of steps taken: "></ion-radio>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Times Exercised This Week</ion-label>
+        <ion-radio value = "Times exercised this week: "></ion-radio>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Meals Needed to Reach Calorie Quota</ion-label>
+        <ion-radio value = "Calories needed to reach calorie quota: "></ion-radio>
+      </ion-item>
+
+      <button ion-button (click) = "saveOptions()">Save Option</button>
+    </ion-list>
+
+    <br>
+    <button ion-button (click) = count()>Keep Track</button>
+    <br>
+    <h2>{{ savedOption }} {{ numberOfTimes }}</h2>
+  </ion-content>  

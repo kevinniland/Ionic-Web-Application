@@ -11,20 +11,12 @@ import { HomePage } from '../pages/home/home';
 })
 
 export class MyApp {
-  rootPage:any = 'LoginPage';
+  rootPage:any = HomePage;
 
   constructor(platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen, private newsService: NewsServiceProvider) {
     platform.ready().then(() => {
       statusBar.styleDefault();
       splashScreen.hide();
     });
-  }
-  
-  articles: any = [];
-
-  ngOnInit() {
-    this.newsService.GetNewsData().subscribe(data => {
-      this.articles = data.articles;
-    })
   }
 }

@@ -12,7 +12,8 @@ import { Platform } from 'ionic-angular';
 export class GeolocationPage {
   latitudePos: number;
   longitudePos: number;
-  
+  hidden = true;
+
   constructor(public navCtrl: NavController, public navParams: NavParams, private platform: Platform, private geolocation: Geolocation) {
     platform.ready().then(() => {
       geolocation.getCurrentPosition().then(pos => {
@@ -31,6 +32,11 @@ export class GeolocationPage {
   }
 
   printGeolocation() {
-  
-  } 
+    if (this.hidden == true) {
+      this.hidden = false;
+    }
+    else {
+      this.hidden = true;
+    }
+  }
 }
