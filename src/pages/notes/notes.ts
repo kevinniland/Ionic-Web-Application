@@ -8,16 +8,13 @@ import { Storage } from '@ionic/Storage';
   templateUrl: 'notes.html',
 })
 export class NotesPage {
-  title = "Notes"; // Data binding in progress
+  // Variables
+  title = "Notes"; // Two-way data binding
   myNote:string;
   savedNote:string;
 
   constructor(public navCtrl: NavController, public navParams: NavParams, private storage: Storage) {
 
-  }
-
-  ionDidViewLoad() {
-    console.log('ionDidViewLoad NotePage'); 
   }
 
   addNote() {
@@ -27,6 +24,8 @@ export class NotesPage {
     }).catch((err) => {
       console.log(err);
     })
+    // Event binding
+    alert("Note has been successfully saved");
   }
 
   ionViewWillEnter() {

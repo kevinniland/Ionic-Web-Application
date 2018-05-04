@@ -9,6 +9,7 @@
 
     <button ion-button (click) = options()>Show Options</button>
 
+    <!-- Set to hidden by default -->
     <ion-list radio-group [(ngModel)] = "option" [hidden] = "hidden">
       <ion-item>
         <ion-label>Steps Taken</ion-label>
@@ -31,5 +32,6 @@
     <br>
     <button ion-button (click) = count()>Keep Track</button>
     <br>
+    <!-- Prints selected option and number of times button was pressed -->
     <h2>{{ savedOption }} {{ numberOfTimes }}</h2>
   </ion-content>  

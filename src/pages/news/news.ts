@@ -15,8 +15,9 @@ export class NewsPage {
 
   }
 
-  newsStories: any = [];
-
+  // Variables 
+  newsStories: any = []; // Saves data from JSON to an array
+  title = 'News'; // Two-way data binding/String interpolation
 
   ionViewDidLoad() {
     this.news.GetNewsData().subscribe(data => {

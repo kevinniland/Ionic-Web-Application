@@ -10,15 +10,16 @@ import { Platform } from 'ionic-angular';
 })
 
 export class GeolocationPage {
+  // Variables
   latitudePos: number;
   longitudePos: number;
   hidden = true;
+  title = 'Geolocation';
 
   constructor(public navCtrl: NavController, public navParams: NavParams, private platform: Platform, private geolocation: Geolocation) {
     platform.ready().then(() => {
       geolocation.getCurrentPosition().then(pos => {
-        console.log('lat: ' + pos.coords.latitude + ', lon: ' + pos.coords.longitude);
-
+        // Saves latitude/longitude to variables
         this.latitudePos = pos.coords.latitude;
         this.longitudePos = pos.coords.longitude;
       });
@@ -31,6 +32,7 @@ export class GeolocationPage {
     })
   }
 
+  // Hides/unhihdes geolocation
   printGeolocation() {
     if (this.hidden == true) {
       this.hidden = false;

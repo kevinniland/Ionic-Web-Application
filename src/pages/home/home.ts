@@ -12,7 +12,9 @@ export class HomePage {
   }
 
   note: string;
+  title = 'Utility App';
 
+  // Opens individual pages
   openClock() {
     this.navCtrl.push("ClockPage");
   }
@@ -31,13 +33,5 @@ export class HomePage {
 
   openCounter() {
     this.navCtrl.push("WaldoGamePage");
-  }
-
-  ionViewWillEnter() {
-    this.storage.get("myNote").then((data) => {
-      this.note = data;
-    }).catch((err) => {
-      console.log(err);
-    })
   }
 }

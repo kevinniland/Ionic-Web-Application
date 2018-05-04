@@ -6,10 +6,13 @@
 <ion-content padding>
   <ion-title>Note:</ion-title>
   <ion-item>
+    <!-- Allows user to enter a desired note -->
       <ion-input [(ngModel)] = "myNote" aria-placeholder="What would you like to make a note of?"></ion-input>
   </ion-item>
+  <!-- Adds note to storage -->
   <button ion-button (click) = "addNote()">Add Note</button>
   <ion-list>
+    <!-- Prints saved note -->
     <ol>
       <h3><b>{{ savedNote }}</b></h3>
     </ol>

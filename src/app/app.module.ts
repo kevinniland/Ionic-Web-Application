@@ -34,10 +34,10 @@ import { Calendar } from '@ionic-native/calendar';
     StatusBar,
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
+    // Include news and geolocation provider
     NewsServiceProvider,
     Geolocation,
-    GeolocationProvider,
-    Calendar
+    GeolocationProvider
   ]
 })
 

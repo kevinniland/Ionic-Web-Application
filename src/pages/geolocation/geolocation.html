@@ -1,12 +1,14 @@
 <ion-header>
   <ion-navbar>
-    <ion-title>Geolocation</ion-title>
+    <ion-title>{{ title }}</ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content padding>
+  <!-- Hides/unhides user's geolocation -->
   <button ion-button (click) = "printGeolocation()">What's my location?</button>
 
+  <!-- Gets longitude/latitude -->
   <p [hidden] = "hidden">Longitude: {{ longitudePos }}</p>
   <p [hidden] = "hidden">Latitude: {{ latitudePos }}</p>
 </ion-content>
